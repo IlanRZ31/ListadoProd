@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             }
             rcvLista.layoutManager = LinearLayoutManager(this@MainActivity)
             rcvLista.adapter = ProductoAdapter(listaProd, { producto -> onItemSelected(producto) },
-                { position -> onDeleteItem(position) }, { position -> onUpdateItem(position) })
+                { position -> eliminar(position) }, { position -> actualizar(position) })
             limpiar()
         }
     }
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
 
-    private fun onUpdateItem(position: Int) {
+    private fun actualizar(position: Int) {
 
         with(binding) {
             try {
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun onDeleteItem(position: Int) {
+    private fun eliminar(position: Int) {
 
         try {
 

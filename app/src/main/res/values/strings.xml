@@ -9,4 +9,6 @@
     <string name="Editar" />
     <string name="id_del_producto">ID del Producto</string>
     <string name="precio_del_producto">Precio del Producto</string>
+    <string name="_0">0</string>
+    <string name="_0_00">0.00</string>
 </resources>
