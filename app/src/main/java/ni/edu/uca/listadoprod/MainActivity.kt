@@ -45,13 +45,13 @@ class MainActivity : AppCompatActivity() {
                 ).show()
             }
             rcvLista.layoutManager = LinearLayoutManager(this@MainActivity)
-            rcvLista.adapter = ProductoAdapter(listaProd, { producto -> onItemSelected(producto) },
+            rcvLista.adapter = ProductoAdapter(listaProd, { producto -> seleccionar(producto) },
                 { position -> eliminar(position) }, { position -> actualizar(position) })
             limpiar()
         }
     }
 
-    private fun onItemSelected(producto: Producto) {
+    private fun seleccionar(producto: Producto) {
         with(binding) {
             etID.text = producto.id.toString().toEditable()
             etNombreProd.text = producto.nombre.toEditable()
